@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head> Aula 24<br><br></head>
+<meta charset="UTF-8">
+
+<body>
+<h1>Area do Triangulo</h1>
+<button onclick="mostrarA()">Área Alert</button>
+<button onclick="mostrarO()">Área Output</button>
+<div id="output"></div>
+</body>
+    <script>
+    var largura = parseFloat(prompt("Digite a Largura"));
+    var altura = parseFloat(prompt("Digite a Altura"));
+
+    function mostrarA(){
+        var area = ct( largura, altura);
+        alert (" A area total é : " + area );
+    }
+
+    function mostrarO(){
+        var area = ct( largura, altura);
+document.querySelector('#output').innerHTML =  "A area total é : " + area ;
+    }
+
+    function ct(largura , altura){
+        return largura * altura;
+    }
+    </script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NaN</title>
+</head>
+<body>
+  <h1>Lógica de programação</h1>
+
+  <button onclick="iniciarCalculo('+')">+</button>
+  <button onclick="iniciarCalculo('-')">-</button>
+  <button onclick="iniciarCalculo('*')">*</button>
+  <button onclick="iniciarCalculo('/')">/</button>
+
+    <div id="output"></div>
+
+    <script>
+        var n2 = parseFloat(prompt("Digite o 1º Numero"));
+        escreve(n2);
+
+        function iniciarCalculo(simbolo){
+        var n1 = parseFloat(document.querySelector("#output").textContent);
+
+        var n2 = parseFloat(prompt("Digite o 2º Numero"));
+
+        try{
+
+        var msg = calcular(simbolo , n1, n2);
+        } catch(e){
+            console.log(e)
+        }
+
+
+
+
+        escreve(msg);
+          }
+
+        function escreve(mensagem){
+            var output = document.querySelector("#output");
+                output.innerHTML = mensagem;
+
+        }
+
+        function calcular(simbolo, n1, n2){
+            if( simbolo !== '+' && simbolo !== '-' && simbolo
+            !== '*' && simbolo !== '/ '){
+            throw new Error("Digite um sinal valido");
+
+            }
+            if( isNaN(n1)  || isNaN(n2) ){
+                throw new Error('Digite apenas numeros');
+
+                }
+
+            var numeroCalculado = null;
+
+            switch(simbolo){
+                case "+":
+                    numeroCalculado = n1 + n2;
+                break;
+
+                case "-":
+                    numeroCalculado = n1 - n2;
+                break;
+
+                case "*":
+                    numeroCalculado = n1 * n2;
+                break;
+
+                case "/":
+                    numeroCalculado = n1 / n2;
+
+        }
+                return numeroCalculado;
+        }
+
+
+    </script>
+
+</body>
+</html>

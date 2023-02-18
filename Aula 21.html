@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>Calculadora</head>
+<meta charset="utf-8">
+<body>
+<button onclick="cSoma()" >+</button>
+<button onclick="cSub()" >-</button>
+<button onclick="cMult()">*</button>
+<button onclick="cDiv()" >/</button>
+<div id="output"></div>
+<script>
+
+    var n1 = parseFloat(prompt("Digite o 1º numero: "));
+
+    function escreve(){
+        var output = document.querySelector("#output");
+        output.innerHTML = n1;
+    }
+
+
+    function cSoma() {
+        var n2 = parseFloat(prompt("Digite o 2º numero: "));
+        n1 = n1+n2;
+        escreve();
+
+}
+
+      function cSub() {
+        var n2 = parseFloat(prompt("Digite o 2º numero: "));
+        n1 = n1-n2;
+        escreve();
+
+}
+  function cMult() {
+        var n2 = parseFloat(prompt("Digite o 2º numero: "));
+        n1 = n1*n2;
+        escreve();
+
+}
+  function cDiv() {
+        var n2 = parseFloat(prompt("Digite o 2º numero: "));
+        n1 = n1/n2;
+        escreve();
+
+}
+</script>
+</body>
+</html>

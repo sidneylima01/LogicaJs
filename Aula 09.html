@@ -1,0 +1,43 @@
+<!doctype html> 
+//fazer jogador1 digitar um numero
+//fazer jogador2 digitar outro numero
+//se forem iguais, mostrar mensagem 'empate'
+//sortear um numero entre 0 e 1
+// se o numero sorteado for 0, ganha quem escolher o numero MENOR
+//se o numero sorteado for 1, ganha quem escolher o numero MAIOR
+<!-- Math.randon -->
+<html>
+	<head>
+		<title> Aula 09</title>
+		<meta charset="utf-8">
+	</head>
+		<body>
+			<h1> Aula 09 </h1>
+		<script>
+			var n1 = parseInt(prompt("Digite o 1º valor"));
+			var n2 = parseInt(prompt("Digite o 2º valor"));
+		if (n1 === n2){
+			alert("Numeros iguais - Empate ");
+		} else {
+			var nSorteado = parseInt( Math.random() * 2);
+			
+		if (nSorteado === 0 ){
+			if(n1 < n2){
+				alert("Ganhou o Jogador 1");
+			}else {
+				alert("Ganhou o Jogador 2");
+			}
+		}else{
+			if (n1 > n2){
+					alert("Ganhou o Jogador 1");
+			}else {
+				alert("Ganhou o Jogador 2");
+			}
+		}
+		}
+			
+			
+		</script>
+		</body>
+
+</html>

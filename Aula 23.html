@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>Calculadora</head>
+<meta charset="utf-8">
+<body>
+<button onclick="calcular('+')" >+</button>
+<button onclick="calcular('-')" >-</button>
+<button onclick="calcular('*')">*</button>
+<button onclick="calcular('/')" >/</button>
+<div id="output"></div>
+<script>
+
+    var n1 = parseFloat(prompt("Digite o 1º numero: "));
+
+    function escreve(){
+        var output = document.querySelector("#output");
+        output.innerHTML = n1;
+    }
+
+
+    function calcular( simbolo ) {
+        var n2 = parseFloat(prompt("Digite o 2º numero: "));
+
+       switch(simbolo){
+         case '+':
+            n1 += n2;
+            break;
+
+         case '-':
+            n1 -= n2;
+            break;
+
+         case '*':
+            n1 *= n2;
+            break;
+
+         case '/':
+            n1 /= n2;
+            }
+
+
+escreve();
+
+       
+
+}
+</script>
+</body>
+</html>

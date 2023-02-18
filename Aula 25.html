@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>Calculadora</head>
+<meta charset="utf-8">
+<body>
+<button onclick="iniC('+')" >+</button>
+<button onclick="iniC('-')" >-</button>
+<button onclick="iniC('*')">*</button>
+<button onclick="iniC('/')" >/</button>
+<div id="output"></div>
+<script>
+
+    var n1 = parseFloat(prompt("Digite o 1º numero: "));
+    escreve(n1);
+
+    function iniC(simbolo){
+        var n1 = parseFloat(document.querySelector("#output").textContent);
+        var n2 = parseFloat(prompt("Digite outro numero"));
+        var msg = calcular(simbolo, n1 , n2 );
+        escreve (msg);
+
+    }
+
+  function escreve(mensagem){
+        var output = document.querySelector("#output");
+        output.innerHTML = mensagem;
+    }
+  function calcular(simbolo, n1 , n2) {
+       var numeroCalc = null;
+
+       switch(simbolo){
+         case '+':
+           numeroCalc = n1 + n2;
+            break;
+
+         case '-':
+           numeroCalc = n1 - n2;
+            break;
+
+         case '*':
+           numeroCalc = n1 * n2;
+            break;
+
+         case '/':
+           numeroCalc = n1 / n2;
+            }
+            return numeroCalc;
+            }
+</script>
+</body>
+</html>

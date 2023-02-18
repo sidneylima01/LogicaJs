@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head> Aula 16 </head>
+	<body> 
+		<h1>Tabuada</h1>
+		<meta charset="utf-8">
+		<script>
+		var n1 = parseInt(prompt("Digite um número: "));
+
+			for(var i = 1 ; i <= 10; i++){
+		document.write( n1 + " x " + i + " = " + (n1 * i ) + "<br>");
+			}
+			document.write("Saiu do loop <br>");
+
+		var n2 = prompt("Digite 1 para digitar outro numero, ou 2 para limpar a tabuada")
+			if( n2 == 1){
+			var n3 = parseInt(prompt("Digite outro numero"))	
+				for(var i2 = 1; i2 <= 10; i2++){
+				document.write( n3 + " x " + i2 + "=" + (n3 * i2) + "<br>");
+				}document.write("Saiu do loop");
+			}
+			else{
+				alert("Você saiu do programa");
+			}
+		</script>
+	</body>
+</html>
